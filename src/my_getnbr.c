@@ -15,7 +15,7 @@ int	selector(char c)
 		return (0);
 }
 
-int	my_getnbr(char const *str)
+int	my_getnbr(char *str)
 {
 	int incr = 0;
 	int low = 1;
