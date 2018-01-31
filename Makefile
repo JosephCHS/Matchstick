@@ -11,8 +11,9 @@ GCC	=	gcc -o
 
 SRC	=	src/ms_check_params.c		\
 		src/ms_create_map.c		\
-		src/ms_nb_col.c		\
-		src/my_getnbr.c		\
+		src/ms_nb_col.c			\
+		src/ms_matches_fill.c		\
+		src/my_getnbr.c			\
 		src/my_matchstick.c		\
 		src/my_put_error_str.c		\
 

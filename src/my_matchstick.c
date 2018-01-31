@@ -16,7 +16,7 @@ int	main(int ac, char **av)
 		return (84);
 	}
 	map = create_map(av);
-	map = create_matches(map, av);
+	map = matches_fill(map, av);
 	free(map);
 	return (0);
 }

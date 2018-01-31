@@ -22,6 +22,9 @@ char	*map_star_last(char *, int);
 char	*map_put_n(char *, char *);
 int	last_n(int, char *);
 
+//ms_matches_fill.c
+char	*matches_fill(char *map, char **av);
+
 //ms_nb_col.c
 int	nb_col(char *);
 
