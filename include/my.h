@@ -36,4 +36,8 @@ int	my_getnbr(char *);
 void	my_err_putchar(char);
 void	my_putstr_error(char *);
 
+//my_putstr.c
+void	my_putchar(char);
+void	my_putstr(char const *);
+
 #endif	/* MY_H_ */

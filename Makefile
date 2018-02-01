@@ -2,7 +2,7 @@
 ## EPITECH PROJECT, 2018
 ## Makefile
 ## File description:
-## Makefile for the 105torus project
+## Makefile ms
 ##
 
 RM	= rm -f
@@ -16,6 +16,7 @@ SRC	=	src/ms_check_params.c		\
 		src/my_getnbr.c			\
 		src/my_matchstick.c		\
 		src/my_put_error_str.c		\
+		src/my_putstr.c			\
 
 NAME	=	matchstick
 
