@@ -35,3 +35,18 @@ void	print_error_matches(int nb_max_matches)
 	my_putstr(" matches per turn\n");
 	return;
 }
+
+void	print_ai_turn(void)
+{
+	my_putstr("AI's turn...");
+	return;
+}
+
+void	print_ai_recap(int line, int matches)
+{
+	my_putstr("AI removed ");
+	my_put_nbr (matches);
+	my_putstr(" match(es) from line ");
+	my_put_nbr(line);
+	my_putchar('\n');
+}

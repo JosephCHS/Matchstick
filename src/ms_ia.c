@@ -45,7 +45,7 @@ int	nb_matches_on_line(char **map, int idx)
 {
 	int nb = 0;
 
-	while ((*map)[idx] == '|' && idx != 0) {
+	while ((*map)[idx - 1] == '|' && idx != 0) {
 		--idx;
 		++nb;
 	}

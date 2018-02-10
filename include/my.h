@@ -73,6 +73,8 @@ int	nb_col(char *);
 void	print_line_recap(int, int);
 int	print_result(int);
 void	print_error_matches(int);
+void	print_ai_turn(void);
+void	print_ai_recap(int, int);
 
 //my_getnbr.c
 int	selector(char);
