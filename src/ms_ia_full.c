@@ -26,6 +26,7 @@ void	ia_play_one(char **map, int idx)
 void	ia_play_dispo_less_one(char **map, int nb_matches_line, int idx)
 {
 	--nb_matches_line;
+	--idx;
 	while (nb_matches_line != 0) {
 		(*map)[idx] = ' ';
 		--nb_matches_line;

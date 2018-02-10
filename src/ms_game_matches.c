@@ -25,6 +25,7 @@ int	game_matches(char *map, char **av)
 			return (result);
 		}
 		my_putstr(map);
+		print_ai_turn();
 		result = ia_modif_map(&map, av[2]);
 		if (result == 2) {
 			my_putstr(map);
@@ -53,7 +54,8 @@ int	gamer_condition(char **map, int result, char **av)
 		free(buf);
 		if (bol == -1 || bol == 1)
 			return (bol);
-		bol = 3;
+		else if (bol == 3)
+			return (bol);
 	}
 	return (result);
 }
@@ -61,6 +63,7 @@ int	gamer_condition(char **map, int result, char **av)
 int	line_ok(char **map, char *buf, int nb_max_matches, int gamer_line)
 {
 	int gamer_matches = 0;
+	int bol = 0;
 
 	my_putstr("Matches:\n");
 	buf = get_next_line(0);
@@ -72,10 +75,12 @@ int	line_ok(char **map, char *buf, int nb_max_matches, int gamer_line)
 	if (check_input_matches(buf, map, nb_max_matches, gamer_line) == 1) {
 		gamer_modif_map(map, gamer_matches, gamer_line);
 		print_line_recap(gamer_line, gamer_matches);
+		bol = 3;
 	}
 	free(buf);
-	if (check_result(map) == 1) {
+	if (check_result(map) == 1)
 		return (1);
-	}
+	else if (bol == 3)
+		return (3);
 	return (0);
 }

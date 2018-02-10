@@ -38,7 +38,7 @@ void	print_error_matches(int nb_max_matches)
 
 void	print_ai_turn(void)
 {
-	my_putstr("AI's turn...");
+	my_putstr("\nAI's turn...\n");
 	return;
 }
 

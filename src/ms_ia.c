@@ -14,12 +14,15 @@ int	ia_modif_map(char **map, char *av)
 	int nb_matches_line = nb_matches_on_line(map, idx);
 
 	if (nb_matches_line > nb_max_matches) {
+		printf("DBG1: \n");
 		ia_play_full(map, nb_max_matches, idx);
 	}
 	else if (nb_matches_line == 1) {
+		printf("DBG2: \n");
 		ia_play_one(map, idx);
 	}
 	else {
+		printf("DBG3: \n");
 		ia_play_dispo_less_one(map, nb_matches_line, idx);
 	}
 	if (check_result(map) == 1) {
