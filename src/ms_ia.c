@@ -12,19 +12,23 @@ int	ia_modif_map(char **map, char *av)
 	int nb_max_matches = my_getnbr(av);
 	int idx = find_pos_match(map);
 	int nb_matches_line = nb_matches_on_line(map, idx);
+	int line = 0;
+	int matches = 0;
 
 	if (nb_matches_line > nb_max_matches) {
-		ia_play_full(map, nb_max_matches, (idx - 1));
+		matches = ia_play_full(map, nb_max_matches, (idx - 1), &line);
 	}
 	else if (nb_matches_line == 1) {
-		ia_play_one(map, (idx - 1));
+		matches = ia_play_one(map, (idx - 1), &line);
 	}
 	else {
-		ia_play_dispo_less_one(map, nb_matches_line, idx);
+		matches = ia_play_dispo_less_one(map, nb_matches_line, idx, &line);
 	}
 	if (check_result(map) == 1) {
+		print_ai_recap(line, matches);
 		return (2);
 	}
+	print_ai_recap(line, matches);
 	return (0);
 }
 

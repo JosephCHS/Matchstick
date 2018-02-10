@@ -56,9 +56,10 @@ int	find_pos_match(char **);
 int	nb_matches_on_line(char **, int);
 
 //ms_ia_full.c
-void	ia_play_full(char **, int, int);
-void	ia_play_one(char **, int);
-void	ia_play_dispo_less_one(char **, int, int);
+int	ia_play_full(char **, int, int, int *);
+int	ia_play_one(char **, int, int *);
+int	ia_play_dispo_less_one(char **, int, int, int *);
+int	find_line_ia(char **, int);
 
 //ms_map_modif_by_gamer.c
 void	gamer_modif_map(char **, int, int);

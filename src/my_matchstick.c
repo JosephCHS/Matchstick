@@ -20,5 +20,11 @@ int	main(int ac, char **av)
 	map = matches_fill(map, av);
 	result = game_matches(map, av);
 	check_exit_game(result, map);
+	if (result == 2) {
+		result = 1;
+	}
+	else if (result == 1) {
+		result = 2;
+	}
 	return (result);
 }

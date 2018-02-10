@@ -19,10 +19,10 @@ void	print_line_recap(int line, int matches)
 
 int	print_result(int result)
 {
-	if (result == 2) {
+	if (result == 1) {
 		my_putstr("You lost, too bad...\n");
 	}
-	else if (result == 1){
+	else if (result == 2){
 		my_putstr("I lost... snif... but I'll get you next time!!\n");
 	}
 	return (result);
