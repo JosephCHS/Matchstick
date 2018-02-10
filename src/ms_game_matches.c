@@ -18,13 +18,16 @@ int	game_matches(char *map, char **av)
 		my_putstr(map);
 		my_putstr("\nYour turn:\n");
 		result = gamer_condition(&map, result, av);
-		if (result == -1)
-			return (0);
-		else if (result == 1 || result == 2)
-			return (print_result(result));
-		result = ia_modif_map(&map, av[2]);
-		if (result == 2)
+		if (result == -1) {
+			return (-1);
+		}
+		else if (result == 1 || result == 2) {
 			return (result);
+		}
+		result = ia_modif_map(&map, av[2]);
+		if (result == 2) {
+			return (result);
+		}
 	}
 	return (result);
 }
@@ -33,8 +36,8 @@ int	gamer_condition(char **map, int result, char **av)
 {
 	int bol = 0;
 	char *buf = NULL;
-	int gamer_matches = 0;
 	int nb_max_matches = my_getnbr(av[2]);
+	int gamer_line = 0;
 
 	while (bol == 0) {
 		my_putstr("Line:\n");
@@ -42,24 +45,25 @@ int	gamer_condition(char **map, int result, char **av)
 		if (buf == NULL)
 			return (-1);
 		else if (check_input_line(buf, map) == 1) {
-			gamer_matches = my_getnbr(buf);
-			bol = line_ok(map, buf, nb_max_matches, gamer_matches);
+			gamer_line = my_getnbr(buf);
+			bol = line_ok(map, buf, nb_max_matches, gamer_line);
 		}
 		free(buf);
 		if (bol == -1)
-			return (-1);
+			return (bol);
 		else if (bol == 1)
 			return (1);
 	}
 	return (result);
 }
 
-int	line_ok(char **map, char *buf, int nb_max_matches, int gamer_matches)
+int	line_ok(char **map, char *buf, int nb_max_matches, int gamer_line)
 {
-	char gamer_line = my_getnbr(buf);
+	int gamer_matches = 0;
 
 	my_putstr("Matches:\n");
 	buf = get_next_line(0);
+	gamer_matches = my_getnbr(buf);
 	if (buf == NULL) {
 		free(buf);
 		return (-1);

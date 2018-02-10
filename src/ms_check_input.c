@@ -10,7 +10,7 @@
 int	check_input_line(char *buf, char **map)
 {
 	if (input_line_no_nb(buf) == 1) {
-		my_putstr("Error: invalid input (positive number expected\n");
+		my_putstr("Error: invalid input (positive number expected)\n");
 		return (0);
 	}
 	else if (input_line_no_exist(buf, map) == 1) {
@@ -25,7 +25,7 @@ int	check_input_line(char *buf, char **map)
 }
 
 int	check_input_matches(char *gamer_matches, char **map,
-			int nb_max_matches, int gamer_line)
+			    int nb_max_matches, int gamer_line)
 {
 	if (input_line_no_nb(gamer_matches) == 1) {
 		my_putstr("Error: invalid input (positive number expected)\n");

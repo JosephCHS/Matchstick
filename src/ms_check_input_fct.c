@@ -73,6 +73,7 @@ int	max_matches_on_line(char *buf, int gamer_line, char **map)
 	while ((*map)[idx] != '\n') {
 		if ((*map)[idx] == '|')
 			++nb_n;
+		++idx;
 	}
 	if (nb_matches > nb_n)
 		return (1);

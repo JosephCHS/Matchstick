@@ -11,7 +11,7 @@ void	print_line_recap(int line, int matches)
 {
 	my_putstr("Player removed ");
 	my_put_nbr(matches);
-	my_putstr("match(es) from line ");
+	my_putstr(" match(es) from line ");
 	my_put_nbr(line);
 	my_putchar('\n');
 	return;
