@@ -21,6 +21,31 @@ int	check_input_line(char *buf, char **map)
 		my_putstr("Error: this line is out of range\n");
 		return (0);
 	}
+	if (input_line_no_matches(map, buf) == 1) {
+		my_putstr("Error: not enough matches on this line\n");
+		return (0);
+	}
+	return (1);
+}
+
+int	input_line_no_matches(char **map, char *buf)
+{
+	int line_picked = my_getnbr(buf);
+	int idx = 0;
+	int cnt = 0;
+
+	while (cnt != line_picked) {
+		if ((*map)[idx] == '\n') {
+			++cnt;
+		}
+		++idx;
+	}
+	while ((*map)[idx] != '\n') {
+		if ((*map)[idx] == '|') {
+			return (0);
+		}
+		++idx;
+	}
 	return (1);
 }
 

@@ -16,6 +16,7 @@ char	*get_next_line(int);
 
 //ms_check_input.c
 int	check_input_line(char *, char **);
+int	input_line_no_matches(char **, char *);
 int	check_input_matches(char *, char **, int, int);
 
 //ms_check_input_fct.c
