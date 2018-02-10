@@ -15,8 +15,7 @@ int	game_matches(char *map, char **av)
 	int result = 0;
 
 	while (bol == '0') {
-		my_putstr(map);
-		my_putstr("\nYour turn:\n");
+		print_norm(map);
 		result = gamer_condition(&map, result, av);
 		if (result == -1)
 			return (0);
@@ -33,6 +32,13 @@ int	game_matches(char *map, char **av)
 		}
 	}
 	return (result);
+}
+
+void	print_norm(char *map)
+{
+	my_putstr(map);
+	my_putstr("\nYour turn:\n");
+	return;
 }
 
 int	gamer_condition(char **map, int result, char **av)

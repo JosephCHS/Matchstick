@@ -27,7 +27,8 @@ int	ia_play_one(char **map, int idx, int *line)
 	return (1);
 }
 
-int	ia_play_dispo_less_one(char **map, int nb_matches_line, int idx, int *line)
+int	ia_play_dispo_less_one(char **map,
+			int nb_matches_line, int idx, int *line)
 {
 	int nb_m = 0;
 

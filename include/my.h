@@ -47,6 +47,7 @@ int	check_exit_game(int, char *);
 
 //ms_game_matches.c
 int	game_matches(char *, char **);
+void	print_norm(char *);
 int	gamer_condition(char **, int, char **);
 int	line_ok(char **, char *, int, int);
 
