@@ -52,7 +52,7 @@ int	gamer_condition(char **map, int result, char **av)
 		if (bol == -1)
 			return (bol);
 		else if (bol == 1)
-			return (1);
+			return (bol);
 	}
 	return (result);
 }
@@ -71,8 +71,6 @@ int	line_ok(char **map, char *buf, int nb_max_matches, int gamer_line)
 	if (check_input_matches(buf, map, nb_max_matches, gamer_line) == 1) {
 		gamer_modif_map(map, gamer_matches, gamer_line);
 		print_line_recap(gamer_line, gamer_matches);
-		free(buf);
-		return (1);
 	}
 	free(buf);
 	if (check_result(map) == 1) {
