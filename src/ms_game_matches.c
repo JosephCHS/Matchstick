@@ -49,7 +49,7 @@ int	gamer_condition(char **map, int result, char **av)
 	int gamer_line = 0;
 
 	while (bol == 0) {
-		my_putstr("Line:\n");
+		my_putstr("Line: ");
 		buf = get_next_line(0);
 		if (buf == NULL)
 			return (-1);
@@ -71,7 +71,7 @@ int	line_ok(char **map, char *buf, int nb_max_matches, int gamer_line)
 	int gamer_matches = 0;
 	int bol = 0;
 
-	my_putstr("Matches:\n");
+	my_putstr("Matches: ");
 	buf = get_next_line(0);
 	if (buf == NULL) {
 		free(buf);
