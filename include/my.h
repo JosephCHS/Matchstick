@@ -46,6 +46,9 @@ int	last_n(int, char *);
 //ms_exit_game.c
 int	check_exit_game(int, char *);
 
+//ms_fill_memset.c
+void	my_memset(char **, int, int);
+
 //ms_game_matches.c
 int	game_matches(char *, char **);
 void	print_norm(char *);

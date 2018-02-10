@@ -19,7 +19,7 @@ char	*create_map(char **av)
 	if (map == NULL) {
 		return (NULL);
 	}
-	map = memset(map, 32, lines * col);
+	my_memset(&map, lines, col);
 	map[lines * col] = '\0';
 	map = map_star_first(map, av[1], col);
 	return (map);

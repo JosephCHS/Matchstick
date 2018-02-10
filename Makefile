@@ -16,6 +16,7 @@ SRC	=	src/get_next_line.c		\
 		src/ms_check_result.c		\
 		src/ms_create_map.c		\
 		src/ms_exit_game.c		\
+		src/ms_fill_memset.c		\
 		src/ms_game_matches.c		\
 		src/ms_ia.c			\
 		src/ms_ia_full.c		\
