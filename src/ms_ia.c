@@ -17,9 +17,8 @@ int	ia_modif_map(char **map, char *av)
 
 	if (nb_matches_line > nb_max_matches)
 		matches = ia_play_full(map, nb_max_matches, (idx - 1), &line);
-	else if (nb_matches_line == 1) {
+	else if (nb_matches_line == 1)
 		matches = ia_play_one(map, (idx - 1), &line);
-	}
 	else {
 		matches = ia_play_dispo_less_one(map, nb_matches_line,
 						idx, &line);
